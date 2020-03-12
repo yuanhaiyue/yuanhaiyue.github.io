@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xue</title>
+    <script type="text/javascript">
+        function reduce(array,combine,start){
+            let current=start;
+            for(let element of array){
+                current=combine(current,element);
+            }
+            return current;
+        }
+        var date=[{name:'数据导论',credit:2},
+                  {name:'高等数学',credit:2},
+                  {name:'程序设计基础',credit:2},
+                  {name:'ACM竞赛',credit:2},  
+        ];
+        console.log(reduce(date,
+            function(a,b){
+                return a+b.credit;
+            },
+            0));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
